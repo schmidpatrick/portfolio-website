@@ -7,7 +7,7 @@ const getRandomRGB = () => {
     return rgb;
 };
 
-const greeting = () => {
+const cracyGreeting = () => {
     const text = "Good Morning Y'all";
     const element = document.querySelector('#greeting');
 
@@ -24,6 +24,3 @@ const greeting = () => {
 
     element.innerHTML = output;
 };
-
-greeting();
-// setInterval(greeting, 100);
