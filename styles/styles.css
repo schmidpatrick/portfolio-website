@@ -121,7 +121,7 @@ a {
     gap: var(--spacing-xl);
 }
 
-.links {
+.profile-link-container {
     width: 100%;
     max-width: 18rem;
     margin: var(--spacing-lg) 0 0 0;
@@ -131,7 +131,7 @@ a {
     gap: var(--spacing-md);
 }
 
-.link a {
+.profile-link a {
     width: 100%;
     padding: var(--spacing-xs);
     aspect-ratio: 1 / 1;
@@ -148,7 +148,7 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-.link a:hover {
+.profile-link a:hover {
     border: var(--size-border) solid rgb(var(--color-primary));
     transform: scale(1.1, 1.1);
 }
