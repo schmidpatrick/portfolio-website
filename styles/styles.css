@@ -143,7 +143,7 @@ a {
     color: rgb(var(--color-font-regular));
     background: rgba(var(--color-background-regular), 1);
     border-radius: var(--size-radius);
-    box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.5);
+    box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.3);
     border: var(--size-border) solid transparent;
     transition: all 0.3s ease-in-out;
 }
