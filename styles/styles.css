@@ -1,4 +1,5 @@
 :root {
+    --color-background-regular: 22, 24, 28;
     --color-background-dark: 14, 18, 21;
     --color-font-regular: 120, 135, 150;
     --color-white-regular: 230, 230, 230;
@@ -38,6 +39,7 @@ body {
 }
 
 h1 {
+    margin: 0 0 var(--spacing-md);
     font-size: var(--size-font-very-large);
     font-weight: 800;
     line-height: 1.3em;
@@ -45,17 +47,12 @@ h1 {
 }
 
 p {
+    width: 100%;
+    margin: 0 0 var(--spacing-md) 0;
     font-size: var(--size-font-regular);
     line-height: 1.75em;
     color: rgb(var(--color-font-regular));
     word-wrap: break-word;
-    width: 100%;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
 }
 
 svg {
@@ -111,6 +108,10 @@ a {
     padding: var(--spacing-xxl);
 }
 
+.hero-text h1 {
+    margin: 0;
+}
+
 .content-container {
     display: flex;
     flex-direction: column;
@@ -121,6 +122,7 @@ a {
 .links {
     width: 100%;
     max-width: 18rem;
+    margin: var(--spacing-lg) 0 0 0;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -129,30 +131,28 @@ a {
 
 .link a {
     width: 100%;
-    padding: var(--spacing-sm);
+    padding: var(--spacing-xs);
+    aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: var(--spacing-xs);
-    aspect-ratio: 1 / 1;
     color: rgb(var(--color-font-regular));
-    background: rgba(var(--color-background-dark) 0.2);
+    background: rgba(var(--color-background-regular), 1);
     border-radius: var(--size-radius);
     box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.3);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: var(--size-border) solid rgba(var(--color-font-regular), 0.2);
+    border: var(--size-border) solid transparent;
     transition: all 0.3s ease-in-out;
 }
 
 .link a:hover {
-    color: rgb(var(--color-primary));
     border: var(--size-border) solid rgb(var(--color-primary));
-    /* transform: scale(1.05, 1.05); */
+    transform: scale(1.1, 1.1);
 }
 
 p.label {
+    margin: 0;
     font-size: var(--size-font-small);
     font-weight: 700;
     text-align: center;
