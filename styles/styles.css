@@ -12,8 +12,8 @@
     --spacing-lg: 2rem;
     --spacing-xl: 4rem;
     --spacing-xxl: 6rem;
-    --size-font-very-small: 0.6rem;
-    --size-font-small: 0.8rem;
+    --size-font-very-small: 0.8rem;
+    --size-font-small: 0.9rem;
     --size-font-regular: 1rem;
     --size-font-large: 1.5rem;
     --size-font-very-large: 2rem;
@@ -70,7 +70,6 @@ a {
 }
 
 .half-layout-container {
-    /* border: 1px solid red; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -86,8 +85,11 @@ a {
 }
 
 .half-layout-right {
-    /* border: 1px solid green; */
     width: 50%;
+    padding: var(--spacing-xxl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgb(var(--color-background-dark));
 }
 
@@ -113,10 +115,10 @@ a {
 }
 
 .content-container {
+    margin: 0 0 var(--spacing-xxl) 0;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xl);
-    padding: var(--spacing-xxl);
 }
 
 .links {
@@ -141,7 +143,7 @@ a {
     color: rgb(var(--color-font-regular));
     background: rgba(var(--color-background-regular), 1);
     border-radius: var(--size-radius);
-    box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.3);
+    box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.5);
     border: var(--size-border) solid transparent;
     transition: all 0.3s ease-in-out;
 }
@@ -153,8 +155,19 @@ a {
 
 p.label {
     margin: 0;
-    font-size: var(--size-font-small);
+    font-size: var(--size-font-very-small);
     font-weight: 700;
     text-align: center;
     color: inherit;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer p {
+    margin: 0;
+    font-size: var(--size-font-small);
 }
