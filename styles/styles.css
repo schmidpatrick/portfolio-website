@@ -211,7 +211,7 @@ a {
 }
 
 .card-content {
-    width: 60%;
+    width: 100%;
 }
 
 .card-footer {
@@ -219,22 +219,4 @@ a {
     flex-direction: row;
     align-items: center;
     color: rgb(var(--color-font-regular));
-}
-
-.card-watermark {
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.card-watermark svg {
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    color: rgba(var(--color-font-regular), 0.2);
 }
