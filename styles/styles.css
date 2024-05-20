@@ -39,10 +39,18 @@ body {
 }
 
 h1 {
-    margin: 0 0 var(--spacing-md);
+    margin: 0 0 var(--spacing-md) 0;
     font-size: var(--size-font-very-large);
     font-weight: 800;
     line-height: 1.3em;
+    color: rgb(var(--color-white-regular));
+}
+
+h2 {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: var(--size-font-regular);
+    font-weight: 700;
+    line-height: 1.5em;
     color: rgb(var(--color-white-regular));
 }
 
@@ -53,6 +61,26 @@ p {
     line-height: 1.75em;
     color: rgb(var(--color-font-regular));
     word-wrap: break-word;
+}
+
+p.label {
+    margin: 0;
+    font-size: var(--size-font-very-small);
+    font-weight: 700;
+    text-align: center;
+    color: inherit;
+}
+
+p.small {
+    margin: 0;
+    font-size: var(--size-font-small);
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 svg {
@@ -153,21 +181,53 @@ a {
     transform: scale(1.1, 1.1);
 }
 
-p.label {
-    margin: 0;
-    font-size: var(--size-font-very-small);
-    font-weight: 700;
-    text-align: center;
-    color: inherit;
-}
-
 .footer {
     width: 100%;
     display: flex;
     flex-direction: row;
 }
 
-.footer p {
-    margin: 0;
-    font-size: var(--size-font-small);
+.card {
+    width: 100%;
+    padding: var(--spacing-md);
+    margin: 0 0 var(--spacing-md) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    background: rgba(var(--color-background-regular), 1);
+    border-radius: var(--size-radius);
+    box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.3);
+    border: var(--size-border) solid transparent;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-content {
+    width: 60%;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(var(--color-font-regular));
+}
+
+.card-watermark {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-watermark svg {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    color: rgba(var(--color-font-regular), 0.2);
 }
