@@ -17,8 +17,8 @@
     --size-font-regular: 1rem;
     --size-font-large: 1.5rem;
     --size-font-very-large: 2rem;
-    --size-border: 0.1rem;
-    --size-radius: 0.8rem;
+    --size-border: 0.125rem;
+    --size-radius: 0.625rem;
 }
 
 * {
@@ -91,6 +91,10 @@ svg {
 
 a {
     text-decoration: none;
+}
+
+.animate {
+    transition: all 200ms ease-in-out;
 }
 
 .highlight {
@@ -173,12 +177,11 @@ a {
     border-radius: var(--size-radius);
     box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.3);
     border: var(--size-border) solid transparent;
-    transition: all 0.3s ease-in-out;
 }
 
 .profile-link a:hover {
     border: var(--size-border) solid rgb(var(--color-primary));
-    transform: scale(1.1, 1.1);
+    transform: scale(1.1);
 }
 
 .footer {
@@ -198,9 +201,13 @@ a {
     border-radius: var(--size-radius);
     box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.3);
     border: var(--size-border) solid transparent;
-    transition: all 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
+}
+
+.card:hover {
+    border: var(--size-border) solid rgba(var(--color-primary));
+    transform: scale(1.05);
 }
 
 .card-content {
