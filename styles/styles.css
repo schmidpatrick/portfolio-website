@@ -15,8 +15,8 @@
     --size-font-very-small: 0.75rem;
     --size-font-small: 0.875rem;
     --size-font-regular: 1rem;
-    --size-font-large: 1.5rem;
-    --size-font-very-large: 1.875rem;
+    --size-font-large: 1.875rem;
+    --size-font-very-large: 2rem;
     --size-border: 0.125rem;
     --size-radius: 0.625rem;
 }
@@ -42,14 +42,22 @@ h1 {
     margin: 0 0 var(--spacing-md) 0;
     font-size: var(--size-font-very-large);
     font-weight: 800;
-    line-height: 1.3em;
+    line-height: 1.2em;
     color: rgb(var(--color-white-regular));
 }
 
 h2 {
+    margin: 0 0 var(--spacing-md) 0;
+    font-size: var(--size-font-large);
+    font-weight: 800;
+    line-height: 1.2em;
+    color: rgb(var(--color-white-regular));
+}
+
+h3 {
     margin: 0 0 var(--spacing-sm) 0;
     font-size: var(--size-font-regular);
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.5em;
     color: rgb(var(--color-white-regular));
 }
@@ -66,7 +74,7 @@ p {
 p.label {
     margin: 0;
     font-size: var(--size-font-very-small);
-    font-weight: 700;
+    font-weight: 800;
     text-align: center;
     color: inherit;
 }
@@ -74,6 +82,10 @@ p.label {
 p.small {
     margin: 0;
     font-size: var(--size-font-small);
+}
+
+p:last-child {
+    margin: 0;
 }
 
 .line-clamp {
@@ -161,7 +173,6 @@ a {
 .profile-link-container {
     width: 100%;
     max-width: 18rem;
-    margin: var(--spacing-lg) 0 0 0;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
