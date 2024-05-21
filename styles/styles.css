@@ -12,11 +12,11 @@
     --spacing-lg: 2rem;
     --spacing-xl: 4rem;
     --spacing-xxl: 6rem;
-    --size-font-very-small: 0.8rem;
-    --size-font-small: 0.9rem;
+    --size-font-very-small: 0.75rem;
+    --size-font-small: 0.875rem;
     --size-font-regular: 1rem;
     --size-font-large: 1.5rem;
-    --size-font-very-large: 2rem;
+    --size-font-very-large: 1.875rem;
     --size-border: 0.125rem;
     --size-radius: 0.625rem;
 }
