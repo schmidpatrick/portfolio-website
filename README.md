@@ -1,2 +1,2 @@
 # website
-Private website.
+A private portfolio website.
