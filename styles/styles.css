@@ -100,17 +100,6 @@ p:last-child {
     overflow: hidden;
 }
 
-svg {
-    height: 1.6em;
-    width: 1.6em;
-    fill: currentColor;
-}
-
-.icon-small {
-    height: 1.2em;
-    width: 1.2em;
-}
-
 a {
     text-decoration: none;
     cursor: pointer;
@@ -124,6 +113,11 @@ a:visited {
 a:hover,
 a:active {
     color: rgba(var(--color-white-regular), 1);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
 }
 
 nav a {
@@ -167,7 +161,7 @@ nav a:last-child {
 }
 
 .hero-image {
-    background-image: url('/img/hero-2.png');
+    background-image: url('/assets/images/hero-2.png');
     background-color: rgb(var(--color-background-dark));
     height: 100%;
     background-position: center;
@@ -249,12 +243,6 @@ nav a:last-child {
     color: rgba(var(--color-primary), 1);
 }
 
-.terms-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .card {
     width: 100%;
     padding: var(--spacing-md);
@@ -334,12 +322,6 @@ nav a:last-child {
     .footer {
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
-    }
-    .terms-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
     }
 }
 
