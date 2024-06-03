@@ -62,7 +62,7 @@ h2 {
 }
 
 h3 {
-    margin: 0 0 var(--spacing-sm) 0;
+    margin: 0 0 var(--spacing-xs) 0;
     font-size: var(--size-font-regular);
     font-weight: 700;
     line-height: 1.5em;
@@ -77,12 +77,23 @@ p {
     word-wrap: break-word;
 }
 
-p.label {
+p.label,
+p.info {
     margin: 0;
     font-size: var(--size-font-very-small);
     font-weight: 700;
-    text-align: center;
+    line-height: 1em;
     color: inherit;
+    display: flex;
+    flex-direction: row;
+}
+
+p.label {
+    gap: var(--spacing-sm);
+}
+
+p.info {
+    gap: var(--spacing-xs);
 }
 
 p.small {
@@ -114,6 +125,10 @@ nav a {
     margin: 0 var(--spacing-md) 0 0;
     font-size: var(--size-font-small);
     color: rgba(var(--color-primary), 1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
 nav a:hover {
@@ -262,10 +277,22 @@ nav a:last-child {
     width: 100%;
 }
 
+.card-header {
+    color: rgba(var(--color-white-regular));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-body {
+}
+
 .card-footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
     color: rgb(var(--color-font-regular));
 }
 
