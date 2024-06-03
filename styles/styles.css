@@ -105,16 +105,6 @@ a {
     cursor: pointer;
 }
 
-a:link,
-a:visited {
-    color: rgba(var(--color-primary), 1);
-}
-
-a:hover,
-a:active {
-    color: rgba(var(--color-white-regular), 1);
-}
-
 nav {
     display: flex;
     flex-direction: row;
@@ -123,6 +113,11 @@ nav {
 nav a {
     margin: 0 var(--spacing-md) 0 0;
     font-size: var(--size-font-small);
+    color: rgba(var(--color-primary), 1);
+}
+
+nav a:hover {
+    color: rgba(var(--color-primary), 0.6);
 }
 
 nav a:last-child {
