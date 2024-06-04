@@ -22,6 +22,14 @@
     --size-radius: 0.625rem;
 }
 
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 200 1000;
+    src: url(/assets/fonts/Mulish-VariableFont_wght.ttf);
+    font-display: block;
+}
+
 *::selection {
     background-color: rgb(var(--color-primary));
     color: rgb(var(--color-background-regular));
