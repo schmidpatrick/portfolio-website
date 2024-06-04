@@ -77,7 +77,16 @@ h3 {
     color: rgb(var(--color-white-regular));
 }
 
-p {
+ul {
+    margin: 0 0 0 var(--spacing-lg);
+}
+
+ul li {
+    position: relative;
+}
+
+p,
+li {
     margin: 0 0 var(--spacing-md) 0;
     font-size: var(--size-font-regular);
     line-height: 1.75em;
@@ -302,6 +311,13 @@ nav a:last-child {
     gap: var(--spacing-md);
     flex-wrap: wrap;
     color: rgb(var(--color-font-regular));
+}
+
+.privacy-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--spacing-xxl) var(--spacing-lg);
 }
 
 .fade-in {
