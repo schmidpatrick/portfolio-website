@@ -215,35 +215,6 @@ nav a:last-child {
     gap: var(--spacing-xl);
 }
 
-.profile-link-container {
-    width: 100%;
-    max-width: 18rem;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--spacing-md);
-}
-
-.profile-link {
-    width: 100%;
-    padding: var(--spacing-xs);
-    aspect-ratio: 1 / 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-xs);
-    color: rgb(var(--color-font-regular));
-    background: rgba(var(--color-background-regular), 1);
-    border-radius: var(--size-radius);
-    box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.3);
-    border: var(--size-border) solid transparent;
-}
-
-.profile-link:hover {
-    color: rgb(var(--color-primary));
-}
-
 .footer {
     width: 100%;
     display: flex;
@@ -301,9 +272,6 @@ nav a:last-child {
     justify-content: space-between;
 }
 
-.card-body {
-}
-
 .card-footer {
     display: flex;
     flex-direction: row;
@@ -320,26 +288,8 @@ nav a:last-child {
     padding: var(--spacing-xxl) var(--spacing-lg);
 }
 
-.fade-in {
-    animation: fadeIn 600ms ease-in-out 0s 1 normal both;
-}
-
 .fade-in-right {
     animation: fadeInRight 600ms ease-in-out 0s 1 normal both;
-}
-
-.fade-in-right-delayed {
-    animation: fadeInRight 600ms ease-in-out 600ms 1 normal both;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 @keyframes fadeInRight {
