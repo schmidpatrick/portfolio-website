@@ -1,6 +1,6 @@
 :root {
-    --color-background-regular: 22, 24, 28;
-    --color-background-dark: 14, 18, 21;
+    --color-background-regular: 40, 40, 45;
+    --color-background-dark: 25, 25, 30;
     --color-font-regular: 120, 135, 150;
     --color-white-regular: 230, 230, 230;
     --color-black-regular: 0, 0, 0;
@@ -9,9 +9,10 @@
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 4rem;
-    --spacing-xxl: 6rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 4rem;
+    --spacing-xxxl: 6rem;
     --size-font-very-small: 0.75rem;
     --size-font-small: 0.875rem;
     --size-font-regular: 1rem;
@@ -19,7 +20,7 @@
     --size-font-large: 1.875rem;
     --size-font-very-large: 2rem;
     --size-border: 0.125rem;
-    --size-radius: 0.625rem;
+    --size-radius: 1.5rem;
 }
 
 @font-face {
@@ -157,7 +158,7 @@ nav a:last-child {
 }
 
 .animate {
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 .highlight {
@@ -180,7 +181,7 @@ nav a:last-child {
 
 .half-layout-right {
     width: 100%;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -198,10 +199,10 @@ nav a:last-child {
 }
 
 .content-container {
-    margin: 0 0 var(--spacing-xxl) 0;
+    margin: 0 0 var(--spacing-xxxl) 0;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-xxl);
 }
 
 .footer {
@@ -210,44 +211,58 @@ nav a:last-child {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--spacing-xl);
 }
 
 .social-links {
     display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
 }
 
 .social-link {
-    width: 36px;
-    height: 36px;
+    padding: var(--spacing-md);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgba(var(--color-font-regular), 1);
+    color: rgba(var(--color-white-regular), 1);
+    background: rgba(var(--color-background-regular), 1);
+    border-radius: var(--size-radius);
+    outline: var(--size-border) solid transparent;
+    outline-offset: var(--size-border);
 }
 
 .social-link:hover {
-    color: rgba(var(--color-primary), 1);
+    outline: var(--size-border) solid rgba(var(--color-font-regular), 1);
+    outline-offset: calc(var(--size-border) * 2);
+}
+
+.icon-wrapper-square {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
     width: 100%;
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     margin: 0 0 var(--spacing-md) 0;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
     background: rgba(var(--color-background-regular), 1);
     border-radius: var(--size-radius);
-    box-shadow: 0 0.2rem 0.5rem rgba(var(--color-black-regular), 0.3);
-    border: var(--size-border) solid transparent;
+    outline: var(--size-border) solid transparent;
+    outline-offset: var(--size-border);
     position: relative;
     overflow: hidden;
 }
 
 .card:hover {
-    border: var(--size-border) solid rgba(var(--color-font-regular), 0.2);
-    transform: scale(1.04);
+    outline: var(--size-border) solid rgba(var(--color-font-regular), 1);
+    outline-offset: calc(var(--size-border) * 2);
 }
 
 .card-content {
@@ -295,15 +310,15 @@ nav a:last-child {
 
 @media only screen and (min-width: 600px) {
     .half-layout-right {
-        padding: var(--spacing-xl);
+        padding: var(--spacing-xxl);
     }
     .content-container {
-        margin: 0 0 var(--spacing-xxl) 0;
-        gap: var(--spacing-xl);
+        margin: 0 0 var(--spacing-xxxl) 0;
+        gap: var(--spacing-xxl);
     }
     .footer {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
 
@@ -331,6 +346,6 @@ nav a:last-child {
     }
     .half-layout-right {
         width: 50%;
-        padding: var(--spacing-xxl);
+        padding: var(--spacing-xxxl);
     }
 }
