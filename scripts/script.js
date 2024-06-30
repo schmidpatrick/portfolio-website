@@ -24,3 +24,17 @@ const cracyGreeting = () => {
 
     element.innerHTML = output;
 };
+
+const setActiveNav = () => {
+    const pathname = window.location.pathname;
+    const work = document.querySelector('#work');
+    const about = document.querySelector('#about');
+
+    if (pathname.includes('about')) {
+        about.classList.add('active');
+    } else {
+        work.classList.add('active');
+    }
+};
+
+setActiveNav();
