@@ -67,8 +67,6 @@ h6 {
 }
 
 h1 {
-    margin: 8rem 0 2rem;
-    padding: 0 2rem;
     font-size: var(--size-font-h1);
     text-align: center;
     line-height: 1;
@@ -76,26 +74,25 @@ h1 {
 }
 
 h2 {
-    margin: 4rem 0 2rem;
+    margin: 3rem 0;
     font-size: var(--size-font-h2);
-    line-height: 1.1;
+    line-height: 1.125;
 }
 
 h3 {
     font-size: var(--size-font-h3);
-    line-height: 1.1;
+    line-height: 1.125;
 }
 
 h4 {
-    margin: 2rem 0 1rem;
     font-size: var(--size-font-h4);
-    line-height: 1.1;
+    line-height: 1.125;
 }
 
 p {
-    font-size: var(--size-font-body);
-    line-height: 1.6;
     margin: 0 0 1rem;
+    font-size: var(--size-font-body);
+    line-height: 1.5;
 }
 
 p:last-child {
@@ -118,12 +115,13 @@ a.disabled {
 }
 
 footer {
-    margin: 12rem auto 6rem;
+    margin: 10rem auto 6rem;
+    padding: 0 2rem;
     max-width: var(--size-max-width);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 header {
@@ -169,6 +167,15 @@ nav ul li a.active::after {
     bottom: 0;
 }
 
+.title-wrapper {
+    margin: 10rem 0 6rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
 .links {
     display: flex;
     flex-direction: row;
@@ -207,10 +214,8 @@ a.icon-link-target:hover .icon-link {
 }
 
 .subtitle {
-    margin: 0 auto;
-    padding: 0 2rem;
     text-align: center;
-    max-width: 55ch;
+    max-width: 40ch;
 }
 
 .grid-wrapper {
@@ -226,7 +231,6 @@ a.icon-link-target:hover .icon-link {
 }
 
 .about-image {
-    margin: 7rem 0 0;
     grid-column: 1 / 26;
     aspect-ratio: 1 / 1;
     background: url('/assets/images/hero-2-square.png') center/cover no-repeat;
@@ -238,7 +242,6 @@ a.icon-link-target:hover .icon-link {
 }
 
 .cards-wrapper {
-    margin: 5rem 0;
     padding: 0 2rem;
 }
 
@@ -278,17 +281,17 @@ a.icon-link-target:hover .icon-link {
     border-radius: var(--size-radius);
     background: var(--color-background-light);
     color: var(--color-font-regular);
-    transition: all 0.5s var(--transition-timing-bounce);
+    transition: all 400ms var(--transition-timing-bounce);
     overflow: hidden;
 }
 
 .card:hover {
-    transform: translate3d(0, -3px, 0);
+    transform: translate3d(0, -5px, 0);
     box-shadow: var(--shadow-lg);
 }
 
 .card:hover .ide-mockup {
-    transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 20px, 0);
 }
 
 .card-1,
@@ -313,7 +316,7 @@ a.icon-link-target:hover .icon-link {
     flex-direction: column;
     border-radius: var(--size-radius);
     overflow: hidden;
-    transition: all 0.8s var(--transition-timing-bounce);
+    transition: all 600ms var(--transition-timing-bounce);
 }
 
 .ide-mockup-topbar {
@@ -455,7 +458,7 @@ a.icon-link-target:hover .icon-link {
         grid-column: 12 / 26;
     }
     .about-text h2 {
-        margin-top: 7rem;
+        margin-top: 0;
     }
     .grid-wrapper {
         padding: 0 5rem;
@@ -470,23 +473,20 @@ a.icon-link-target:hover .icon-link {
         --size-font-h4: 1.5rem;
         --size-font-body: 1.125rem;
     }
-    h1 {
-        margin: 12rem 0 4rem;
-    }
     nav ul li a.active::after {
         width: 5px;
         height: 5px;
         border-radius: 5px;
     }
+    footer {
+        margin: 12rem auto 8rem;
+    }
+    .title-wrapper {
+        margin: 12rem 0 8rem;
+        gap: 4rem;
+    }
     .subtitle {
         font-size: 1.25rem;
-    }
-    .about-image,
-    .about-text h2 {
-        margin-top: 10rem;
-    }
-    .cards-wrapper {
-        margin: 8rem 0;
     }
     .cards {
         margin: 0 auto;
